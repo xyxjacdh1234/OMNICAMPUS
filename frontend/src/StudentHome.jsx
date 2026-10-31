@@ -7,6 +7,7 @@ import {
   CalendarDays,
   MessageSquarePlus,
   ArrowUpRight,
+  ArrowLeftRight,
   X
 } from 'lucide-react'
 import './StudentHome.css'
@@ -31,6 +32,7 @@ export default function StudentHome() {
       setShowRequest(true)
       return
     }
+
     navigate(path)
   }
 
@@ -59,12 +61,36 @@ export default function StudentHome() {
           OmniCampus<span>.</span>
         </button>
 
-        <button
-          className="student-home-account"
-          onClick={() => navigate('/student/profile')}
+        {/* HEADER ACTIONS */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            gap: '10px',
+            flexWrap: 'wrap'
+          }}
         >
-          My Account <ArrowUpRight size={18} />
-        </button>
+          {/* SWITCH ROLE */}
+          <button
+            type="button"
+            className="student-home-account"
+            onClick={() => navigate('/choose-role')}
+          >
+            <ArrowLeftRight size={18} />
+            Switch Role
+          </button>
+
+          {/* MY ACCOUNT */}
+          <button
+            type="button"
+            className="student-home-account"
+            onClick={() => navigate('/student/profile')}
+          >
+            My Account
+            <ArrowUpRight size={18} />
+          </button>
+        </div>
       </header>
 
       {/* HERO */}
@@ -170,6 +196,7 @@ export default function StudentHome() {
               <label htmlFor="student-request-category">
                 Request category
               </label>
+
               <select
                 id="student-request-category"
                 value={category}
@@ -190,6 +217,7 @@ export default function StudentHome() {
               <label htmlFor="student-request-title">
                 Subject
               </label>
+
               <input
                 id="student-request-title"
                 type="text"
@@ -206,6 +234,7 @@ export default function StudentHome() {
               <label htmlFor="student-request-details">
                 Description
               </label>
+
               <textarea
                 id="student-request-details"
                 placeholder="Describe the shortage, issue, or suggestion..."

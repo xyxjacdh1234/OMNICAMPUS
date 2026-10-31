@@ -14,6 +14,10 @@ import StudentLogin from './StudentLogin.jsx'
 import StudentHome from './StudentHome.jsx'
 import OngoingEvents from './OngoingEvents.jsx'
 import UpcomingEvents from './UpcomingEvents.jsx'
+import StudentSuggestions from './StudentSuggestions.jsx'
+import EventRegistration from './EventRegistration.jsx'
+import CollegeSuggestions from './CollegeSuggestions.jsx'
+import StudentProfile from './StudentProfile.jsx'
 
 import './App.css'
 
@@ -422,6 +426,12 @@ function App() {
         element={<Earnings />}
       />
 
+      {/* COLLEGE REPRESENTATIVE STUDENT SUGGESTIONS */}
+      <Route
+        path="/college/suggestions"
+        element={<CollegeSuggestions />}
+      />
+
       {/* STUDENT LOGIN AND REGISTRATION */}
       <Route
         path="/student/login"
@@ -434,6 +444,12 @@ function App() {
         element={<StudentHome />}
       />
 
+      {/* STUDENT MY ACCOUNT */}
+      <Route
+        path="/student/profile"
+        element={<StudentProfile />}
+      />
+
       {/* STUDENT ONGOING COLLABORATIONS */}
       <Route
         path="/student/ongoing-events"
@@ -444,6 +460,18 @@ function App() {
       <Route
         path="/student/upcoming-events"
         element={<UpcomingEvents />}
+      />
+
+      {/* STUDENT SUGGESTIONS AND REQUESTS */}
+      <Route
+        path="/student/requests"
+        element={<StudentSuggestions />}
+      />
+
+      {/* STUDENT EVENT REGISTRATION */}
+      <Route
+        path="/student/event-registration"
+        element={<EventRegistration />}
       />
 
     </Routes>

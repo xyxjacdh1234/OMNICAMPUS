@@ -3,11 +3,13 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   ArrowUpRight,
+  ArrowLeftRight,
   House,
   LayoutDashboard,
   Boxes,
   Handshake,
   Wallet,
+  MessageSquareText,
 } from "lucide-react";
 import "./Home.css";
 
@@ -36,6 +38,11 @@ const navigationTiles = [
     title: "Earnings",
     icon: Wallet,
     path: "/earnings",
+  },
+  {
+    title: "Student Suggestions",
+    icon: MessageSquareText,
+    path: "/college/suggestions",
   },
 ];
 
@@ -88,12 +95,33 @@ export default function Home() {
             <span className="oc-logo-dot">.</span>
           </button>
 
-          <button
-            className="oc-account"
-            onClick={() => goTo("/account")}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              flexWrap: "wrap",
+              justifyContent: "flex-end",
+            }}
           >
-            My Account <ArrowUpRight size={16} />
-          </button>
+            <button
+              type="button"
+              className="oc-account"
+              onClick={() => goTo("/choose-role")}
+            >
+              <ArrowLeftRight size={16} />
+              Switch Role
+            </button>
+
+            <button
+              type="button"
+              className="oc-account"
+              onClick={() => goTo("/account")}
+            >
+              My Account
+              <ArrowUpRight size={16} />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -137,7 +165,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FIVE NAVIGATION TILES */}
+        {/* SIX NAVIGATION TILES */}
         <section
           className="oc-tile-section"
           aria-label="OmniCampus navigation"

@@ -1,0 +1,269 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+.college-suggestions-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f9fc;
+  color: #0b1d3a;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.college-suggestions-page * {
+  box-sizing: border-box;
+}
+
+.college-suggestions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: white;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.college-suggestions-logo {
+  border: 0;
+  background: transparent;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 33px;
+  font-style: italic;
+  font-weight: 700;
+  color: #0b1d3a;
+  cursor: pointer;
+}
+
+.college-suggestions-logo span,
+.college-suggestions-footer strong span {
+  color: #3568d4;
+}
+
+.college-suggestions-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1px solid #dce4ef;
+  border-radius: 9px;
+  background: white;
+  color: #18345b;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.college-suggestions-main {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 65px 0 90px;
+  flex: 1;
+}
+
+.college-suggestions-kicker {
+  display: block;
+  margin-bottom: 17px;
+  color: #3568d4;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.college-suggestions-heading h1 {
+  margin: 0 0 15px;
+  font-size: clamp(36px, 5vw, 56px);
+  letter-spacing: -1.5px;
+}
+
+.college-suggestions-heading h1 em {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #3568d4;
+}
+
+.college-suggestions-heading p {
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.college-suggestions-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 42px;
+}
+
+.college-suggestions-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 23px;
+  border: 1px solid #e4eaf3;
+  border-radius: 13px;
+  background: white;
+}
+
+.college-suggestions-stat svg {
+  color: #3568d4;
+}
+
+.college-suggestions-stat strong {
+  font-size: 29px;
+}
+
+.college-suggestions-stat span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.college-suggestions-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.college-suggestions-section-heading h2 {
+  font-size: 23px;
+  margin: 0;
+}
+
+.college-suggestions-section-heading span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.college-suggestions-empty {
+  text-align: center;
+  padding: 70px 25px;
+  border: 1px dashed #d5dfec;
+  border-radius: 14px;
+  background: white;
+}
+
+.college-suggestions-empty svg {
+  color: #8aa2c4;
+}
+
+.college-suggestions-empty h3 {
+  margin: 17px 0 10px;
+  font-size: 18px;
+}
+
+.college-suggestions-empty p {
+  max-width: 450px;
+  margin: auto;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.college-suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.college-suggestions-card {
+  padding: 26px;
+  border: 1px solid #e4eaf3;
+  border-radius: 13px;
+  background: white;
+}
+
+.college-suggestions-card-top,
+.college-suggestions-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.college-suggestions-id {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.college-suggestions-status {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #edf3ff;
+  color: #3568d4;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.college-suggestions-text {
+  margin: 22px 0;
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.college-suggestions-date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #7c899b;
+  font-size: 12px;
+}
+
+.college-suggestions-card-bottom select {
+  padding: 10px 12px;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  background: #fbfcfe;
+  color: #0b1d3a;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.college-suggestions-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 27px 7%;
+  border-top: 1px solid #e4eaf3;
+  background: white;
+  color: #7c899b;
+  font-size: 12px;
+}
+
+.college-suggestions-footer strong {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 26px;
+  font-style: italic;
+  color: #0b1d3a;
+}
+
+@media (max-width: 768px) {
+  .college-suggestions-header {
+    padding: 18px 5%;
+  }
+
+  .college-suggestions-main {
+    padding: 45px 0 65px;
+  }
+
+  .college-suggestions-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .college-suggestions-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .college-suggestions-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

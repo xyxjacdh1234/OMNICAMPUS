@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap');
 
+/* =========================================
+   OMNICAMPUS - STUDENT HOMEPAGE
+========================================= */
+
 .student-home {
   min-height: 100vh;
   display: flex;
@@ -10,14 +14,23 @@
   font-family: 'DM Sans', Arial, sans-serif;
 }
 
-/* HEADER */
+.student-home *,
+.student-home *::before,
+.student-home *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   HEADER
+========================================= */
 
 .student-home-header {
-  height: 92px;
-  padding: 0 max(5.5%, calc((100% - 1120px) / 2));
+  min-height: 92px;
+  padding: 15px max(5.5%, calc((100% - 1120px) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   background: #ffffff;
 }
 
@@ -39,9 +52,12 @@
   color: #3568d4;
 }
 
+/* MY ACCOUNT AND SWITCH ROLE BUTTONS */
+
 .student-home-account {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   padding: 16px 20px;
   border: 0;
@@ -51,6 +67,7 @@
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
@@ -61,27 +78,36 @@
   transform: translateY(-2px);
 }
 
-/* HERO WITH AUDITORIUM BACKGROUND */
+/* =========================================
+   HERO - TECH TEAM NAVY BLUE GRADIENT
+========================================= */
 
-.student-home-hero {
+.student-home .student-home-hero {
   position: relative;
+  isolation: isolate;
   min-height: 515px;
+
+  background-color: #0b1d3a;
+
   background-image:
     linear-gradient(
       90deg,
-      rgba(11, 29, 58, 0.88) 0%,
-      rgba(11, 29, 58, 0.72) 47%,
-      rgba(11, 29, 58, 0.53) 100%
+      rgba(7, 22, 45, 0.92) 0%,
+      rgba(11, 29, 58, 0.78) 48%,
+      rgba(11, 29, 58, 0.42) 100%
     ),
-    url('/images/home-background.jpg');
+    url('/images/conference-hall.jpg') !important;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
   color: #ffffff;
 }
 
 .student-home-hero-inner {
+  position: relative;
+  z-index: 1;
   width: min(1120px, 89%);
   min-height: 515px;
   margin: 0 auto;
@@ -109,6 +135,7 @@
 
 .student-home-hero h1 {
   margin: 35px 0 22px;
+  color: #ffffff;
   font-size: clamp(38px, 4.6vw, 61px);
   font-weight: 700;
   font-style: italic;
@@ -164,7 +191,9 @@
   letter-spacing: 0.12em;
 }
 
-/* NAVIGATION TILES */
+/* =========================================
+   NAVIGATION TILES
+========================================= */
 
 .student-home-navigation {
   padding: 23px 5.5% 30px;
@@ -212,7 +241,9 @@
   box-shadow: 0 12px 28px rgba(11, 29, 58, 0.1);
 }
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 .student-home-footer {
   min-height: 136px;
@@ -235,7 +266,9 @@
   font-weight: 700;
 }
 
-/* REQUEST MODAL */
+/* =========================================
+   REQUEST MODAL
+========================================= */
 
 .student-request-backdrop {
   position: fixed;
@@ -361,11 +394,13 @@
   line-height: 1.6;
 }
 
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
 
 @media (max-width: 800px) {
   .student-home-header {
-    padding: 0 25px;
+    padding: 15px 25px;
   }
 
   .student-home-tiles {
@@ -381,10 +416,16 @@
   }
 }
 
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
 @media (max-width: 480px) {
   .student-home-header {
-    height: 75px;
-    padding: 0 18px;
+    min-height: 75px;
+    height: auto;
+    padding: 15px 18px;
+    flex-wrap: wrap;
   }
 
   .student-home-logo {
@@ -392,8 +433,14 @@
   }
 
   .student-home-account {
-    padding: 12px;
-    font-size: 12px;
+    padding: 11px 12px;
+    font-size: 11px;
+    gap: 7px;
+  }
+
+  .student-home-account svg {
+    width: 15px;
+    height: 15px;
   }
 
   .student-home-hero,
