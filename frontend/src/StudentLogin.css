@@ -1,0 +1,578 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+.student-auth-page {
+  min-height: 100vh;
+  padding: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf1f6;
+  font-family: "DM Sans", sans-serif;
+  color: #0b1d3a;
+}
+
+.student-auth-page *,
+.student-auth-page *::before,
+.student-auth-page *::after {
+  box-sizing: border-box;
+}
+
+.student-auth-shell {
+  width: min(1160px, 100%);
+  min-height: 690px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 25px 80px rgba(11, 29, 58, 0.12);
+}
+
+.student-brand-panel {
+  position: relative;
+  min-height: 690px;
+  padding: 37px 42px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 65% 40%, rgba(75, 120, 195, 0.25), transparent 50%),
+    linear-gradient(145deg, #102d57, #07152c);
+  color: white;
+}
+
+.student-brand-header {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 2;
+}
+
+.student-brand-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.student-brand-edition {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  color: #a6b8d3;
+}
+
+.student-visual {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+.student-network {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.student-network-line {
+  stroke: rgba(147, 197, 253, 0.5);
+  stroke-width: 1.4;
+  stroke-dasharray: 6 8;
+}
+
+.student-network-secondary {
+  opacity: 0.45;
+}
+
+.student-node {
+  fill: #60a5fa;
+}
+
+.student-center-ring {
+  stroke: #7dd3fc;
+  stroke-width: 1.8;
+  fill: rgba(96, 165, 250, 0.12);
+}
+
+.student-center-node {
+  fill: #fff;
+}
+
+.student-brand-content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  margin-bottom: 65px;
+}
+
+.student-section-index {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #93c5fd;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.student-index-line {
+  width: 25px;
+  height: 1px;
+  background: #93c5fd;
+}
+
+.student-brand-content h2 {
+  margin: 23px 0;
+  font-size: clamp(29px, 3vw, 43px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+}
+
+.student-brand-content h2 em {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #b6d5ff;
+}
+
+.student-brand-content p {
+  max-width: 350px;
+  color: #b4c4dc;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.student-brand-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #a6b8d3;
+}
+
+.student-footer-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #67e8f9;
+}
+
+.student-form-panel {
+  min-width: 0;
+  padding: 32px 43px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-form-top,
+.student-form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+}
+
+.student-back-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: none;
+  color: #64748b;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.student-secure-indicator {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 800;
+  color: #3568d4;
+}
+
+.student-secure-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2dd4bf;
+}
+
+.student-form-content {
+  width: 100%;
+  max-width: 390px;
+  margin: auto;
+  padding: 28px 0;
+}
+
+.student-form-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #3568d4;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.student-form-intro h1 {
+  margin: 15px 0 9px;
+  font-size: 38px;
+  letter-spacing: -1.5px;
+}
+
+.student-form-intro h1 em {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #3568d4;
+}
+
+.student-form-intro p {
+  margin: 0 0 23px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #64748b;
+}
+
+.student-auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4px;
+  margin-bottom: 22px;
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.student-auth-tabs button {
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.student-auth-tabs button.active {
+  background: #fff;
+  color: #0b1d3a;
+  box-shadow: 0 2px 8px rgba(11, 29, 58, 0.08);
+}
+
+.student-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.student-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #263a59;
+}
+
+.student-field input {
+  width: 100%;
+  min-height: 45px;
+  padding: 12px 13px;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  background: #fff;
+  color: #0b1d3a;
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.student-field input:focus {
+  border-color: #3568d4;
+  box-shadow: 0 0 0 3px rgba(53, 104, 212, 0.1);
+}
+
+.student-field input::placeholder {
+  color: #a0aabd;
+}
+
+.student-field small {
+  font-size: 10px;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+.student-field-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-text-button {
+  border: none;
+  background: transparent;
+  color: #3568d4;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.student-password-wrap {
+  position: relative;
+}
+
+.student-password-wrap input {
+  padding-right: 46px;
+}
+
+.student-show-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.student-signin-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 49px;
+  margin-top: 5px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 8px;
+  background: #0b1d3a;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.student-signin-button:hover {
+  background: #173a6e;
+  transform: translateY(-2px);
+}
+
+.student-form-message {
+  margin: 0;
+  color: #3568d4;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.student-register-section {
+  margin-top: 25px;
+  padding-top: 19px;
+  border-top: 1px solid #e8edf4;
+  text-align: center;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.student-register-section button {
+  border: 0;
+  background: transparent;
+  color: #3568d4;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.student-form-footer {
+  margin-top: auto;
+}
+
+@media (max-width: 800px) {
+  .student-auth-page {
+    padding: 12px;
+  }
+
+  .student-auth-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .student-brand-panel {
+    min-height: 270px;
+    padding: 25px;
+  }
+
+  .student-visual {
+    top: -60px;
+    left: 35%;
+    width: 70%;
+  }
+
+  .student-brand-content {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  .student-brand-content h2 {
+    font-size: 27px;
+    margin: 12px 0;
+  }
+
+  .student-brand-content p {
+    margin: 0;
+  }
+
+  .student-form-panel {
+    padding: 25px;
+  }
+
+  .student-form-content {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 420px) {
+  .student-brand-panel,
+  .student-form-panel {
+    padding: 20px;
+  }
+
+  .student-form-intro h1 {
+    font-size: 31px;
+  }
+
+  .student-form-footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .student-visual,
+  .student-signin-button {
+    transition: none;
+  }
+}
+
+/* =========================================
+   MATCH STUDENT LOGIN BOX TO COLLEGE LOGIN
+========================================= */
+
+.student-auth-page {
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-auth-shell {
+  width: min(1180px, 100%);
+  min-height: 710px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.student-brand-panel {
+  min-height: 710px;
+  padding: 36px 43px;
+}
+
+.student-form-panel {
+  min-width: 0;
+  padding: 36px 49px 28px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .student-auth-page {
+    padding: 16px;
+  }
+
+  .student-auth-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .student-brand-panel {
+    min-height: 440px;
+    padding: 30px;
+  }
+
+  .student-form-panel {
+    padding: 32px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .student-auth-page {
+    padding: 0;
+  }
+
+  .student-auth-shell {
+    border-radius: 0;
+  }
+
+  .student-brand-panel {
+    min-height: 350px;
+    padding: 25px;
+  }
+
+  .student-form-panel {
+    padding: 28px 23px;
+  }
+}
+
+/* MATCH STUDENT LOGIN DIMENSIONS TO COLLEGE LOGIN */
+
+@media (min-width: 901px) {
+  .student-auth-page {
+    min-height: 100vh;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .student-auth-shell {
+    width: min(1180px, 100%);
+    min-height: 710px;
+    height: min(838px, calc(100vh - 60px));
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: stretch;
+  }
+
+  .student-brand-panel {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .student-form-panel {
+    min-height: 0;
+    height: 100%;
+  }
+}

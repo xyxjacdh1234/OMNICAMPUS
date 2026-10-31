@@ -6,8 +6,8 @@ import {
   House,
   LayoutDashboard,
   Boxes,
-  Building2,
   Handshake,
+  Wallet,
 } from "lucide-react";
 import "./Home.css";
 
@@ -28,14 +28,14 @@ const navigationTiles = [
     path: "/resources",
   },
   {
-    title: "Institutions",
-    icon: Building2,
-    path: "/institutions",
-  },
-  {
     title: "Collaborations",
     icon: Handshake,
     path: "/events",
+  },
+  {
+    title: "Earnings",
+    icon: Wallet,
+    path: "/earnings",
   },
 ];
 

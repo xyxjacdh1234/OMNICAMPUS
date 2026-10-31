@@ -980,3 +980,209 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* =========================================
+   STUDENT LOGIN — MATCH COLLEGE LOGIN
+   Same background image and navy-blue theme
+========================================= */
+
+.student-auth-page {
+  background: #0b1d3a;
+}
+
+.student-auth-shell {
+  width: min(1180px, 100%);
+  grid-template-columns: 1.05fr 0.95fr;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  box-shadow:
+    0 28px 85px rgba(0, 0, 0, 0.24),
+    0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* SAME IMAGE AS COLLEGE REPRESENTATIVE LOGIN */
+
+.student-brand-panel {
+  background-image:
+    linear-gradient(
+      rgba(11, 29, 58, 0.55),
+      rgba(11, 29, 58, 0.75)
+    ),
+    url('/images/login-background.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* SAME LOGO AND BRAND COLORS */
+
+.student-brand-name {
+  font-size: 37px;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.student-brand-edition,
+.student-section-index {
+  color: #a9c3ee;
+}
+
+.student-index-line {
+  background: #749ce4;
+}
+
+.student-brand-content h2 em {
+  color: #a9c7ff;
+}
+
+.student-brand-content p {
+  color: #c2d0e5;
+}
+
+.student-brand-footer {
+  color: #c4d4eb;
+}
+
+.student-footer-dot {
+  background: #6698ed;
+}
+
+/* SAME NETWORK ILLUSTRATION */
+
+.student-network-line {
+  stroke: #8eb4fa;
+  stroke-width: 1.15;
+  stroke-dasharray: 5 8;
+  opacity: 0.55;
+  animation: studentLineMove 24s linear infinite;
+}
+
+.student-network-secondary {
+  opacity: 0.25;
+  animation-duration: 32s;
+}
+
+.student-node {
+  fill: #b3d0ff;
+  opacity: 0.75;
+  animation: studentNodePulse 4s ease-in-out infinite alternate;
+}
+
+.student-center-ring {
+  stroke: rgba(176, 207, 255, 0.7);
+  stroke-width: 1;
+  fill: rgba(53, 104, 212, 0.09);
+}
+
+.student-center-node {
+  fill: #ffffff;
+}
+
+@keyframes studentLineMove {
+  to {
+    stroke-dashoffset: -260;
+  }
+}
+
+@keyframes studentNodePulse {
+  from {
+    opacity: 0.35;
+  }
+
+  to {
+    opacity: 0.9;
+  }
+}
+
+/* SAME WHITE FORM PANEL */
+
+.student-form-panel {
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(220, 232, 250, 0.50),
+      transparent 48%
+    ),
+    #ffffff;
+}
+
+.student-form-kicker {
+  color: #3568d4;
+}
+
+.student-form-intro h1 {
+  color: #0b1d3a;
+}
+
+.student-form-intro h1 em {
+  color: #3568d4;
+}
+
+.student-form-intro p {
+  color: #657185;
+}
+
+/* SAME INPUT COLORS */
+
+.student-field label {
+  color: #0b1d3a;
+}
+
+.student-field input {
+  background: rgba(142, 154, 172, 0.08);
+  border-color: #dce3ed;
+}
+
+.student-field input:focus {
+  background: #ffffff;
+  border-color: #3568d4;
+  box-shadow: 0 0 0 3px rgba(53, 104, 212, 0.11);
+}
+
+/* SAME COBALT BUTTON */
+
+.student-signin-button {
+  background: #3568d4;
+  color: #ffffff;
+}
+
+.student-signin-button:hover {
+  background: #2456ba;
+  box-shadow: 0 10px 24px rgba(53, 104, 212, 0.24);
+}
+
+/* KEEP THE FORM RESPONSIVE */
+
+@media (max-width: 900px) {
+  .student-auth-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-auth-page {
+    padding: 0;
+  }
+
+  .student-auth-shell {
+    border: none;
+    border-radius: 0;
+  }
+
+  .student-brand-panel {
+    min-height: 350px;
+    padding: 25px;
+  }
+
+  .student-form-panel {
+    padding: 28px 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .student-network-line,
+  .student-node {
+    animation: none;
+  }
+}

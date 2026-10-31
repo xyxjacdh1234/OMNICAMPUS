@@ -144,10 +144,10 @@ export default function Resources() {
 
           <button
             className="res-back"
-            onClick={() => navigate("/dashboard")}
+            onClick={() => navigate("/home")}
           >
             <ArrowLeft size={17} />
-            Dashboard
+            Back to Home
           </button>
         </div>
       </header>
